@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    </head>
+    <style>
+        body{
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <body>
+        <form id="calc" >
+            <input type="text" id="num1"> 
+                <select id="op">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>			
+            <input type="text" id="num2">
+            <button onclick="calc()">Try me!</button>
+        </form>
+        <script>
+            setInterval(
+                function () {
+                    alert("Please, use me...");
+                }
+            , 30000);
+                
+            function calc() {	
+                count = 0;
+                var n1 = document.getElementById("num1").value;
+                var n2 = document.getElementById("num2").value;
+                var op = document.getElementById("op").value;
+                ans = 0;
+                if (n1 % 1 != 0 || n2 % 1 != 0 || n1 < 0 || n2 < 0 || n1 == "" || n2 == ""){
+                    console.log("Error :(");
+                    alert("Error :(");
+                    return;
+                }
+                else if (op == "+"){ans = parseInt(n1) + parseInt(n2);}
+                else if (op == "-"){ans = parseInt(n1) - parseInt(n2);}
+                else if (op == "*"){ans = parseInt(n1) * parseInt(n2);}
+                else if ((op == "/" || op == "%") && n2 == 0){
+                    console.log("It’s over 9000!");
+                    alert("It’s over 9000!");
+                    return;
+                }
+                else if (op == "/"){ans = parseInt(n1) / parseInt(n2);}
+                else if (op == "%"){ans = parseInt(n1) % parseInt(n2);}
+                        
+                console.log(ans);
+                alert(ans);
+            }
+        </script>
+    </body>
+</html>

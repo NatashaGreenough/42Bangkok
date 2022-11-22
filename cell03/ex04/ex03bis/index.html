@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<style>
+			body {
+				text-align: center;
+				font-family: "Lucida Console", "Courier New", monospace;
+				background-color: lightskyblue;
+				max-width: 800px;
+				margin-left: 23.5%;
+			}
+		
+			button {
+				font-family: "Lucida Console", "Courier New", monospace;
+				font-size: 20px;
+				margin-bottom: 5px;
+				background-color:beige;
+				border:2px solid black;
+			}
+		
+			.ft_list {
+				display: flex;
+				flex-direction: column;
+			}
+		
+			h1{
+			  margin-top: 50px;
+			  margin-bottom: 10px;
+			  background-color: steelblue;
+			  padding: 40px;
+			  border:2px solid black;
+			}
+		
+		  </style>
+	</head>
+	<body>
+		<div>
+			<h1>TO DO LIST</h1>
+			<div class="ft_list" id="ft_list"></div>
+			<button onclick="newButton()" 
+			style="background-color: steelblue; padding-left: 5%; padding-right: 5%; padding-top: 1%; padding-bottom: 1%; margin-top: 5px;">
+				New
+			</button>
+		</div>
+        <script src="todo.js"></script>
+	</body>
+</html>
